@@ -1,0 +1,5 @@
+Gene 1	Phenotype 1	Gene 2	Phenotype 2	Drug	standard	dose_recommendataion	In detail
+CYP2C9	Poor Metabolizer	SLCO1B1	Poor Function	Fluvastatin	Recommendation	Contraindicated	Patients should be prescribed an alternative statin depending on the desired potency
+CYP2C9	Intermediate Metabolizer	SLCO1B1	Poor Function	Fluvastatin	Recommendation	Contraindicated	Patients should be prescribed an alternative statin depending on the desired potency
+ABCG2	Poor function	SLCO1B1	Poor Function	Rosuvastatin	Recommendation	Further dose reduction	Patients should be prescribed ¡Â10mg as a starting dose
+ABCG2	Poor function	SLCO1B1	Decreased Function	Rosuvastatin	Recommendation	Further dose reduction	Patients should be prescribed ¡Â10mg as a starting dose

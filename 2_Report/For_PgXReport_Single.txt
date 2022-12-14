@@ -1,0 +1,110 @@
+Gene	Drug	standard	phenotype	dose_recommendataion	In detail
+ABCG2	Rosuvastatin	recommendation	Poor Function	Dose reduction	"Patient should be prescribed ¡Â20mg as a starting dose. If dose >20mg needed for desired efficacy, consider combination therapy."
+CACNA1S	"Desflurane,Enflurane,Halothane,Isoflurane,Methoxyflurane,Sevoflurane,Succinylcholine"	recommendation	Malignant Hyperthermia Susceptibility	Contraindicated	Contraindicated to use this drug.
+CYP2B6	Efavirenz	recommendation	Poor Metabolizer	Further dose reduction	Initiating with decreased dose of 400 or 200 mg/day.
+CYP2B6	Efavirenz	recommendation	Intermediate Metabolizer	Dose reduction	Initiating with decreased dose of 400 mg/day.
+CYP2D6	Amitriptyline	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Amitriptyline	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Amitriptyline	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If amitriptyline is warranted, consider a 50% dose reduction."
+CYP2D6	Clomipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Clomipramine	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If the drug is warranted, consider a 50% dose reduction."
+CYP2D6	Codeine	recommendation	Ultrarapid Metabolizer	Contraindicated	Alternate non-tramadol analgesics are recommended.
+CYP2D6	Codeine	recommendation	Poor Metabolizer	Contraindicated	Alternate non-tramadol analgesics are recommended.
+CYP2D6	Desipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	An alternative drug should be considered.
+CYP2D6	Desipramine	recommendation	Poor Metabolizer	Contraindicated	"An alternative drug should be considered. If the drug is warranted, consider a 50% dose reduction."
+CYP2D6	Desipramine	recommendation	Intermediate Metabolizer	Dose reduction	Recommends a 25% dose reduction.
+CYP2D6	Doxepin	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Doxepin	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If the drug is warranted, consider a 50% dose reduction."
+CYP2D6	Fluvoxamine	recommendation	Poor Metabolizer	Dose reduction	Consider a 25-50% reduction of recommended starting dose and titrate to response or use an alternative drug.
+CYP2D6	Imipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Imipramine	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If amitriptyline is warranted, consider a 50% dose reduction."
+CYP2D6	Imipramine	recommendation	Intermediate Metabolizer	Dose reduction	Recommends a 25% dose reduction.
+CYP2D6	Nortriptyline	recommendation	Intermediate Metabolizer	Dose reduction	Recommends a 25% dose reduction.
+CYP2D6	Nortriptyline	recommendation	Ultrarapid Metabolizer	Contraindicated	An alternative drug should be considered.
+CYP2D6	Nortriptyline	recommendation	Poor Metabolizer	Contraindicated	"An alternative drug should be considered. If nortriptyline is warranted, consider a 50% dose reduction."
+CYP2D6	Paroxetine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Paroxetine	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If paroxetine use is warranted, consider a 50% reduction of recommended starting dose and titrate to response."
+CYP2D6	Ondansetron	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends selecting an alternate drug. (eg. granisetron)
+CYP2D6	Tamoxifen	recommendation	Poor Metabolizer	Contraindicated	"Recommends the use of alternative hormonal therapy such as an aromatase inhibitor for postmenopausal women or aromatase inhibitor along with ovarian function suppression in premenopausal women, if aromatase inhibitor use is not contraindicated."
+CYP2D6	Tramadol	recommendation	Ultrarapid Metabolizer	Contraindicated	Alternate non-codeine analgesics.
+CYP2D6	Trimipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2D6	Trimipramine	recommendation	Poor Metabolizer	Contraindicated	"Recommends an alternative drug. If amitriptyline is warranted, consider a 50% dose reduction."
+CYP2D6	Trimipramine	recommendation	Intermediate Metabolizer	Dose reduction	A 25% dose reduction should be considered.
+CYP2D6	Tropisetron	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends selecting an alternate drug. (eg. granisetron)
+CYP3A5	Tacrolimus	recommendation	Intermediate Metabolizer	Increased dose	"Increasing the starting dose by 1.5 to 2 times the recommended starting dose in patients, though total starting dose should not exceed 0.3 mg/kg/day."
+CYP3A5	Tacrolimus	recommendation	Normal Metabolizer	Increased dose	"Increasing the starting dose by 1.5 to 2 times the recommended starting dose in patients, though total starting dose should not exceed 0.3 mg/kg/day."
+CYP3A5	Tacrolimus	recommendation	Possible Intermediate Metabolizer	Increased dose	"Increasing the starting dose by 1.5 to 2 times the recommended starting dose in patients, though total starting dose should not exceed 0.3 mg/kg/day."
+CYP2C19	Dexlansoprazole	recommendation	Ultrarapid Metabolizer	Increased dose	Increase the starting daily dose and to monitor efficacy.
+CYP2C19	Dexlansoprazole	recommendation	Poor Metabolizer	Dose reduction	Chronic therapy (>12 weeks) and efficacy achieved is to consider 50% reduction in daily dose.
+CYP2C19	Dexlansoprazole	recommendation	Intermediate Metabolizer	Dose reduction	Chronic therapy (>12 weeks) and efficacy achieved is to consider 50% reduction in daily dose.
+CYP2C19	Imipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Imipramine	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Imipramine	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Imipramine	recommendation	Intermediate Metabolizer	Dose reduction	A 25% dose reduction should be considered.
+CYP2C19	Doxepin	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Doxepin	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Doxepin	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Voriconazole	recommendation	Ultrarapid Metabolizer	Contraindicated	Selecting an alternative agent.
+CYP2C19	Voriconazole	recommendation	Rapid Metabolizer	Contraindicated	Selecting an alternative agent.
+CYP2C19	Voriconazole	recommendation	Poor Metabolizer	Contraindicated	Selecting an alternative agent.
+CYP2C19	"Omeprazole,Lansoprazole,Pantoprazole"	recommendation	Intermediate Metabolizer	Dose reduction	Chronic therapy (>12 weeks) and efficacy achieved is to consider 50% reduction in daily dose.
+CYP2C19	"Omeprazole,Lansoprazole,Pantoprazole"	recommendation	Poor Metabolizer	Dose reduction	Chronic therapy (>12 weeks) and efficacy achieved is to consider 50% reduction in daily dose.
+CYP2C19	Amitriptyline	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Amitriptyline	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Amitriptyline	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Escitalopram	recommendation	Poor Metabolizer	Dose reduction	Consider a 50% reduction of recommended starting dose and titrate to response or select alternative drug.
+CYP2C19	Escitalopram	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Citalopram	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Citalopram	recommendation	Poor Metabolizer	Dose reduction	Consider a 50% reduction of recommended starting dose.
+CYP2C19	Clopidogrel	recommendation	Intermediate Metabolizer	Contraindicated	Recommends an alternative antiplatelet therapy.
+CYP2C19	Clopidogrel	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative antiplatelet therapy.
+CYP2C19	Clomipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Clomipramine	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Clomipramine	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Sertraline	recommendation	Poor Metabolizer	Dose reduction	Consider a 50% reduction of recommended starting dose and titrate to response or select alternative drug.
+CYP2C19	Trimipramine	recommendation	Ultrarapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Trimipramine	recommendation	Rapid Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Trimipramine	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug.
+CYP2C19	Trimipramine	recommendation	Intermediate Metabolizer	Dose reduction	A 25% dose reduction should be considered.
+CYP2C9	"Phenytoin,Fosphenytoin"	recommendation	Intermediate Metabolizer	Dose reduction	Initiating therapy with lowest recommended starting dose.
+CYP2C9	"Phenytoin,Fosphenytoin"	recommendation	Poor Metabolizer	Further dose reduction	Initiating therapy with 25-50% of the lowest recommended starting dose.
+CYP2C9	"Celecoxib,Ibuprofen,Flurbiprofen,Lornoxicam"	recommendation	Intermediate Metabolizer	Dose reduction	Initiating therapy with lowest recommended starting dose.
+CYP2C9	"Celecoxib,Ibuprofen,Flurbiprofen,Lornoxicam"	recommendation	Poor Metabolizer	Further dose reduction	Initiating therapy with 25-50% of the lowest recommended starting dose.
+CYP2C9	"Piroxicam,Tenoxicam"	recommendation	Intermediate Metabolizer	Contraindicated	Should choose an alternative therapy.
+CYP2C9	"Piroxicam,Tenoxicam"	recommendation	Poor Metabolizer	Contraindicated	Should choose an alternative therapy.
+CYP2C9	Fluvastatin	recommendation	Intermediate Metabolizer	Dose reduction	Should avoid fluvastatin doses greater than 40mg.
+CYP2C9	Fluvastatin	recommendation	Poor Metabolizer	Further dose reduction	Should avoid doses greater than 20mg.
+CYP2C9	Meloxicam	recommendation	Intermediate Metabolizer	Dose reduction	Initiating therapy with 50% of the lowest recommended starting dose or choose an alternative therapy.
+CYP2C9	Meloxicam	recommendation	Poor Metabolizer	Contraindicated	Recommends alternative therapy.
+CYP2C9	Siponimod	recommendation	Poor Metabolizer	Contraindicated	Recommends alternative therapy.
+CYP2C9	Siponimod	recommendation	Intermediate Metabolizer	Dose reduction	Initiating therapy with lowest recommended starting dose.
+DPYD	"Capecitabine,Fluorouracil"	recommendation	Intermediate Metabolizer	Dose reduction	Should receive a dose reduction of 50%.
+DPYD	"Capecitabine,Fluorouracil"	recommendation	Poor Metabolizer	Contraindicated	Recommends an alternative drug for patients.
+NUDT15	Azathioprine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 30-80% of target dose.
+NUDT15	Azathioprine	recommendation	Poor Metabolizer	Contraindicated	Consider an alternate agent or extreme dose reduction of azathioprine.
+NUDT15	Thioguanine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 50-80% of target dose.
+NUDT15	Thioguanine	recommendation	Poor Metabolizer	Contraindicated	Consider an alternate agent or extreme dose reduction of azathioprine.
+NUDT15	Mercaptopurine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 30-80% of target dose.
+NUDT15	Mercaptopurine	recommendation	Poor Metabolizer	Contraindicated	Consider an alternate agent or extreme dose reduction of azathioprine.
+RYR1	"Desflurane,Enflurane,Halothane,Isoflurane,Methoxyflurane,Sevoflurane,Succinylcholine"	recommendation	Malignant Hyperthermia Susceptibility	Contraindicated	Relatively contraindicated in persons with malignant hyperthermia susceptibility.
+SLCO1B1	Fluvastatin	recommendation	Poor Function	Dose reduction	should avoid fluvastatin doses greater than 40mg and and adjust doses of fluvastatin based on disease-specific guidelines.
+SLCO1B1	Lovastatin	recommendation	Decreased Function	Contraindicated	Alternative statin depending on the desired potency.
+SLCO1B1	Lovastatin	recommendation	Possible Decreased Function	Contraindicated	Alternative statin depending on the desired potency.
+SLCO1B1	Lovastatin	recommendation	Poor Function	Contraindicated	Alternative statin depending on the desired potency.
+SLCO1B1	Pitavastatin	recommendation	Decreased Function	Dose reduction	Prescribe ¡Â2mg as a starting dose for patients.
+SLCO1B1	Pitavastatin	recommendation	Possible Decreased Function	Dose reduction	Prescribe ¡Â2mg as a starting dose for patients.
+SLCO1B1	Pitavastatin	recommendation	Poor Function	Further dose reduction	Prescribe ¡Â1mg as a starting dose for patients.
+SLCO1B1	Pravastatin	recommendation	Poor Function	Dose reduction	Prescribe ¡Â40mg as a starting dose and adjust doses of pravastatin based on disease-specific guidelines. Prescriber should be aware of possible increased risk for myopathy with pravastatin especially with doses >40mg per day.
+SLCO1B1	Atorvastatin	recommendation	Decreased Function	Dose reduction	Prescribe ¡Â40mg for patients. Adjust doses of atorvastatin based on disease-specific guidelines. Prescriber should be aware of possible increased risk for myopathy especially for 40mg dose.
+SLCO1B1	Atorvastatin	recommendation	Possible Decreased Function	Dose reduction	Prescribe ¡Â40mg for patients. Adjust doses of atorvastatin based on disease-specific guidelines. Prescriber should be aware of possible increased risk for myopathy especially for 40mg dose.
+SLCO1B1	Atorvastatin	recommendation	Poor Function	Further dose reduction	Prescribe ¡Â20mg for patients. Adjust doses of atorvastatin based on disease-specific guidelines. Prescriber should be aware of possible increased risk for myopathy especially for 40mg dose.
+SLCO1B1	Simvastatin	recommendation	Decreased Function	Contraindicated	"Prescribe an alternative statin depending on the desired potency. If simvastatin therapy is warranted in patients, limit dose to <20mg/day."
+SLCO1B1	Simvastatin	recommendation	Possible Decreased Function	Contraindicated	"Prescribe an alternative statin depending on the desired potency. If simvastatin therapy is warranted in patients, limit dose to <20mg/day."
+SLCO1B1	Simvastatin	recommendation	Poor Function	Contraindicated	Prescribe an alternative statin depending on the desired potency.
+SLCO1B1	Rosuvastatin	recommendation	Poor Function	Dose reduction	"Prescribe ¡Â20mg as a starting dose and adjust doses of rosuvastatin based on disease-specific and specific population guidelines. If dose >20mg needed for desired efficacy, consider combination therapy. (i.e. rosuvastatin plus non-statin guideline directed medical therapy)"
+TPMT	Azathioprine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 30-80% of target dose for patients.
+TPMT	Azathioprine	recommendation	Poor Metabolizer	Contraindicated	Consider an alternate agent or extreme dose reduction of azathioprine for patients.
+TPMT	Thioguanine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 30-80% of target dose for patients.
+TPMT	Thioguanine	recommendation	Poor Metabolizer	Further dose reduction	Consider an alternate agent or extreme dose reduction of thioguanine for patients.
+TPMT	Mercaptopurine	recommendation	Intermediate Metabolizer	Dose reduction	Start at 30-80% of target dose for patients.
+TPMT	Mercaptopurine	recommendation	Poor Metabolizer	Contraindicated	Consider an alternate agent or extreme dose reduction of mercaptopurine for patients.
