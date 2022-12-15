@@ -6,6 +6,7 @@
 * python 3
 * bwa-mem2 ( https://github.com/bwa-mem2/bwa-mem2 )
 * GATK 4 ( https://github.com/broadinstitute/gatk/releases )
+* Picard ( https://broadinstitute.github.io/picard/ )
 * pypgx ( https://pypgx.readthedocs.io/en/latest/index.html )
 * InterVar ( https://github.com/WGLab/InterVar )
 * ANNOVAR ( https://annovar.openbioinformatics.org/en/latest )
