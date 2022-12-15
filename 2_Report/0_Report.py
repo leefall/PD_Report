@@ -471,7 +471,7 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 	nCol=0
 	nRow+=1
 	#fout.write("Gene	Significance	HGVS Name	Allelic State	Transcript	AA Change	Region	Chromosome	Position	Reference Allele	Alternative Allele	rsID	Related Info\n")
-
+	dIntervarNoInfoDict=dict()
 	for sKey in dIntervarPathoDict.keys():
 		#[sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID,sRsID]
 		(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)=dIntervarPathoDict[sKey]
@@ -479,9 +479,10 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 		(sChr,nPosition,sRef,sAlt)=sKey.split("_")
 		
 		if sInfo=="":
-			pass
+			dIntervarNoInfoDict[sKey]=(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)
+			#pass
 		elif sInfo=="-":
-			pass
+			dIntervarNoInfoDict[sKey]=(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)
 		else:
 			#fout.write("{0}\n".format("\t".join(map(str,[sGene,sInterVar,sHGVS,sAllelic,sNMID,sAAChange,"HG19",sChr,nPosition,sRef,sAlt,sInfo]))))
 			lOut=[sGene,sInterVar,sInfo,sHGVS,sAllelic,sNMID,sAAChange,"HG19",sChr,nPosition,sRef,sAlt]
@@ -524,6 +525,23 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 			nCol+=1
 		nCol=0
 		nRow+=1
+	
+	for sKey in dIntervarNoInfoDict.keys():
+		(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)=dIntervarNoInfoDict[sKey]
+		
+		(sChr,nPosition,sRef,sAlt)=sKey.split("_")
+		lOut=[sGene,sInterVar,sAllelic,"HG19",sChr,nPosition,sRef,sAlt,sRsID,sInfo]
+		for sCell in lOut:
+			worksheet4.write(nRow,nCol,sCell)
+			nCol+=1
+		nCol=0
+		nRow+=1
+		
+	
+	
+	
+		
+		
 #Writeing Descripstion Page
 
 	
