@@ -53,7 +53,7 @@ def producer_task(q, cosmic_dict):
 	
 	
 
-	sFilelist=sFilelist
+	sFilelist=lBamlist
 	#sFilelist=["IonXpress_001_R_2017_07_05_12_17_40_user_S5XL-0059-39-20170704_KPCDx_Test_Auto_user_S5XL-0059-39-20170704_KPCDx_Test_103.bam"]
 	for i in sFilelist:
 		#value=random.randint(1,len(sFilelist))
