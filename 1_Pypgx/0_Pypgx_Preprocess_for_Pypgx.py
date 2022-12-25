@@ -15,7 +15,7 @@ ch.setLevel(logging.DEBUG)
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
-
+sInputDir="/mnt/Beta/leefall2/PD/FinalBam"
 
 dPDFileDict=dict()
 fp=open("/mnt/Beta/leefall2/PD/Code/PD_path.txt")
@@ -41,26 +41,27 @@ for sLine in fp.readlines():
 
 
 
-def ControlStatistics(sID):
-	
-	sBamFile=dPDFileDict[sID][0]
+def ControlStatistics(sBamFile):
+	sID=sBamFile.split(".")[0]	
+#	sBamFile=dPDFileDict[sID][0]
 	
 	subprocess.call("pypgx compute-control-statistics VDR /mnt/Beta/leefall2/PD/Control_Statistics/"+sID+".zip "+sBamFile,shell=True)
 	
 	
 	
 	
-def Depth(sID):
-	sBamFile=dPDFileDict[sID][0]
+def Depth(sBamFile):
+	sID=sBamFile.split(".")[0]
+#	sBamFile=dPDFileDict[sID][0]
 	subprocess.call('''
 pypgx prepare-depth-of-coverage /mnt/Beta/leefall2/PD/Depth/'''+sID+'''.zip '''+sBamFile+'''
 
 ''',shell=True)
 
 
-def Preprocess(sID):
-	ControlStatistics(sID)
-	Depth(sID)
+def Preprocess(sBamFile):
+	ControlStatistics(sBamFile)
+	Depth(sBamFile)
 	#BamSort(sFile)
 	#RemoveSam(sFile)
 	#RemoveBam(sFile)
@@ -72,7 +73,7 @@ def Preprocess(sID):
 if __name__=="__main__":
 	StartTime=(time.ctime())
 	data_queue=Queue()
-	#os.chdir("/mnt/Beta/CKD/HN00161065")
+	os.chdir(sInputDir)
 #	number_of_cpus=cpu_count()-2
 	number_of_cpus=6
 	
@@ -81,8 +82,9 @@ if __name__=="__main__":
 
 	p = Pool(number_of_cpus)
 	#sFilelist=glob.glob("/mnt/towel/UKBiobank/FE_vcfs/*.gvcf.gz")#4011848
-	lFilelist=list(dPDFileDict.keys())
+	#lFilelist=list(dPDFileDict.keys())
 	#lFilelist=lFilelist[0:1]
+	lFilelist=glob.glob("*.bam")
 	Pool_map = p.map(Preprocess, lFilelist)
 	
 	print("Start Time")
