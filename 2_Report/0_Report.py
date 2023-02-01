@@ -53,9 +53,6 @@ fp.close()
 
 
 
-#print(dCPICSingle["Atorvastatin"])
-#print(dCPICSingle["Atorvastatin"]["SLCO1B1"])
-
 
 fp=open("For_PgXReport_Double.txt", encoding='euc-kr')
 fp.readline()
@@ -81,6 +78,16 @@ fp.close()
 	
 	
 	
+
+
+dChrlist=dict()
+
+for i in range(1,23):
+	i=str(i)
+	dChrlist[i]=1
+
+dChrlist["X"]=1
+
 
 
 
@@ -184,23 +191,16 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 	dNonActionable=dict()
 	dActionable=dict()
 	
-	#dCPICSingle
-	#dCPICSingle[sDrug][sGene][sPhenotype]=[sDoseRecommendation,sDetailedImplication]
-	#print(dPGxdict)
-	
+
 	for sDrug in dCPICSingle.keys():
 		
 		lTargetGenes=dCPICSingle[sDrug].keys()
 		for sTargetGene in lTargetGenes:
 		
 		
-		
-		#print(sTargetGene)
-		#print(dPGxdict[sTargetGene])
+
 			sSamplePhenotype=dPGxdict[sTargetGene].sPhenotype
-			#if ((sTargetGene=="SLCO1B1") and (sDrug=="Atorvastatin")):
-#				print(sSamplePhenotype)
-			
+
 			
 			if sSamplePhenotype in dCPICSingle[sDrug][sTargetGene].keys():
 				(sDoseRecommendation,sDetailedImplication)=dCPICSingle[sDrug][sTargetGene][sSamplePhenotype]
@@ -315,10 +315,7 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 					nAFR1=round(d1KG[sGene1][sStarPheno]["AFR"]/661,3)
 				except KeyError:
 					nAFR1=0
-					#print(sGene1)
-					#print(sStarPheno)
-					#print(d1KG[sGene1][sStarPheno])
-					#sys.exit()
+
 				try:
 					nAMR1=round(d1KG[sGene1][sStarPheno]["AMR"]/347,3)
 				except KeyError:
@@ -498,46 +495,51 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 	
 	#dIntervarUSDict
 	#[sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo]
-	worksheet4 = workbook.add_worksheet("UncertainSignifiance")
-	#worksheet3.set_column('A:L', 20)
-	worksheet4.set_column('A:M', 20)
-	worksheet4.set_column('J:J', 50)
-	#worksheet3.set_column('M:M', 50)
-	nRow=0
-	nCol=0
-	
-	
-	lFirst=["Gene","Significance","Allelic State","Region","Chromosome","Position","Reference Allele","Alternative Allele","rsID","Related Info"]
-	for sCell in lFirst:
-		worksheet4.write(nRow,nCol,sCell)
-		nCol+=1
-	nCol=0
-	nRow+=1
-	
-	
-	for sKey in dIntervarUSDict.keys():
-		(sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo)=dIntervarUSDict[sKey]
-		(sChr,nPosition,sRef,sAlt)=sKey.split("_")
-		#sUniqueHDRGenes.add(sGene)
-		lOut=[sGene,sInterVar,sAllelic,"HG19",sChr,nPosition,sRef,sAlt,sRsID,sInfo]
-		for sCell in lOut:
-			worksheet4.write(nRow,nCol,sCell)
-			nCol+=1
-		nCol=0
-		nRow+=1
-	
-	for sKey in dIntervarNoInfoDict.keys():
-		(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)=dIntervarNoInfoDict[sKey]
-		
-		(sChr,nPosition,sRef,sAlt)=sKey.split("_")
-		lOut=[sGene,sInterVar,sAllelic,"HG19",sChr,nPosition,sRef,sAlt,sRsID,sInfo]
-		for sCell in lOut:
-			worksheet4.write(nRow,nCol,sCell)
-			nCol+=1
-		nCol=0
-		nRow+=1
-		
-	
+#	worksheet4 = workbook.add_worksheet("UncertainSignifiance")
+#	#worksheet3.set_column('A:L', 20)
+#	worksheet4.set_column('A:M', 20)
+#	worksheet4.set_column('J:J', 50)
+#	#worksheet3.set_column('M:M', 50)
+#	nRow=0
+#	nCol=0
+#	
+#	
+#	lFirst=["Gene","Significance","Allelic State","Region","Chromosome","Position","Reference Allele","Alternative Allele","rsID","Related Info"]
+#	for sCell in lFirst:
+#		worksheet4.write(nRow,nCol,sCell)
+#		nCol+=1
+#	nCol=0
+#	nRow+=1
+#	
+#	
+#	for sKey in dIntervarUSDict.keys():
+#		(sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo)=dIntervarUSDict[sKey]
+#		try:
+#			(sChr,nPosition,sRef,sAlt)=sKey.split("_")
+#		except ValueError:
+#			print("What values to unpack")
+#			print(sKey)
+#			sys.exit()
+#		#sUniqueHDRGenes.add(sGene)
+#		lOut=[sGene,sInterVar,sAllelic,"HG19",sChr,nPosition,sRef,sAlt,sRsID,sInfo]
+#		for sCell in lOut:
+#			worksheet4.write(nRow,nCol,sCell)
+#			nCol+=1
+#		nCol=0
+#		nRow+=1
+#	
+#	for sKey in dIntervarNoInfoDict.keys():
+#		(sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID)=dIntervarNoInfoDict[sKey]
+#		
+#		(sChr,nPosition,sRef,sAlt)=sKey.split("_")
+#		lOut=[sGene,sInterVar,sAllelic,"HG19",sChr,nPosition,sRef,sAlt,sRsID,sInfo]
+#		for sCell in lOut:
+#			worksheet4.write(nRow,nCol,sCell)
+#			nCol+=1
+#		nCol=0
+#		nRow+=1
+#		
+#	
 	
 	
 		
@@ -840,94 +842,94 @@ def CPICAnnotationWrite(dPGxdict,dIntervarPathoDict,dIntervarUSDict,sFile):
 	n0Col=0
 	
 	#################Uncertain Significance
-	worksheet0.write(n0Row,n0Col,'UncertainSignifiance: Information on other genes variants. (Likely benign, Benign, Uncertain significance)',Boldformat)
-	#n0Col+=1
-	#worksheet0.write(n0Row,n0Col,'Information on other genes variants. (Likely benign, Benign, Uncertain significance)',Boldformat)
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Column name',Boldformat)
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Description',Boldformat)
-	
-	
-	
-	
-	
-	n0Row+=1
-	n0Col=0
-	worksheet0.write(n0Row,n0Col,'Gene')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Gene nomenclature of Human Genome Organisation.')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Significance')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Clinical significance of variants. (e.g. Pathogenic, Likely pathogenic)')
-	
-	n0Row+=1
-	n0Col=0
-	
-	
-	worksheet0.write(n0Row,n0Col,'Allelic State')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'The status of allele (e.g. Homozygous, Heterozygous).')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Region')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'The version of the used human reference genome. (e.g. Human Genome 19)')
-	
-	n0Row+=1
-	n0Col=0
-	
-	
-	worksheet0.write(n0Row,n0Col,'Chromosome')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Chromosome name.')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Position')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Variant position.')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Reference Allele')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Reference allele information on the position.')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'Alternative Allele')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Alternative allele information on the position.')
-	
-	n0Row+=1
-	n0Col=0
-	
-	worksheet0.write(n0Row,n0Col,'rsID')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'The unique label of single nucleotide polymorphism in dbSNP databse.')
-	
-	n0Row+=1
-	n0Col=0
-
-	worksheet0.write(n0Row,n0Col,'Related Info')
-	n0Col+=1
-	worksheet0.write(n0Row,n0Col,'Related syndrome associated with the gene from Orphanet.')
-	
-	
-	
+#	worksheet0.write(n0Row,n0Col,'UncertainSignifiance: Information on other genes variants. (Likely benign, Benign, Uncertain significance)',Boldformat)
+#	#n0Col+=1
+#	#worksheet0.write(n0Row,n0Col,'Information on other genes variants. (Likely benign, Benign, Uncertain significance)',Boldformat)
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Column name',Boldformat)
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Description',Boldformat)
+#	
+#	
+#	
+#	
+#	
+#	n0Row+=1
+#	n0Col=0
+#	worksheet0.write(n0Row,n0Col,'Gene')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Gene nomenclature of Human Genome Organisation.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Significance')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Clinical significance of variants. (e.g. Pathogenic, Likely pathogenic)')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	
+#	worksheet0.write(n0Row,n0Col,'Allelic State')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'The status of allele (e.g. Homozygous, Heterozygous).')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Region')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'The version of the used human reference genome. (e.g. Human Genome 19)')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	
+#	worksheet0.write(n0Row,n0Col,'Chromosome')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Chromosome name.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Position')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Variant position.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Reference Allele')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Reference allele information on the position.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'Alternative Allele')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Alternative allele information on the position.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#	
+#	worksheet0.write(n0Row,n0Col,'rsID')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'The unique label of single nucleotide polymorphism in dbSNP databse.')
+#	
+#	n0Row+=1
+#	n0Col=0
+#
+#	worksheet0.write(n0Row,n0Col,'Related Info')
+#	n0Col+=1
+#	worksheet0.write(n0Row,n0Col,'Related syndrome associated with the gene from Orphanet.')
+#	
+#	
+#	
 	
 	
 	workbook.close()
@@ -948,55 +950,66 @@ def ParseInterVar(sFile):
 		t=sLine.split("\t")
 		(sChr,nPosition,sRef,sAlt,sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo)=\
 		(t[0],t[1],t[3],t[4],t[5],t[9],t[11],t[13],t[33],t[-2])
-		sInterVar=sInterVar.strip()
-		sInterVar=sInterVar.split(" PVS1=")[0]
-		sInterVar=sInterVar.split("InterVar: ")[1]
-		if "|" in sInfo:
-			sInfo=sInfo.split("|")[1]
-		sInfo=sInfo.replace("<br>",",")
 		
-		if sAllelic=="het":
-			sAllelic="Heterozygous"
-		elif sAllelic=="hom":
-			sAllelic="Homozygous"
-		#Deletion
-		#TMEM52:NM_178545:exon1:c.69_77del:p.23_26del
-		#Subsitution
-		#SAMD11:NM_152486:exon14:c.C1830T:p.Y610Y
-		#Insertion
-		#PRDM2:NM_001007257:exon3:c.1501_1502insCTC:p.T501delinsTP,PRDM2:NM_012231:exon8:c.2104_2105insCTC:p.T702delinsTP,PRDM2:NM_015866:exon8:c.2104_2105insCTC:p.T702delinsTP
-		sAATrans=sAATrans.split(",")[0]
-		
-		
-		
-		
-		
-		
-		
-		if ((sInterVar=="Likely pathogenic") or (sInterVar=="Pathogenic")):
-			lAATrans=sAATrans.split(":")
-			try:
-				sNMID=lAATrans[1]
-			except IndexError:
-				print(lAATrans)
-				print(sLine)
-				sys.exit()
-			nChange=lAATrans[-2]
-			sAAChange=lAATrans[-1]
-			if "del" in nChange:
-				sHGVS=nChange+sAAChange
-			elif "ins" in nChange:
-				sHGVS=nChange+sAAChange
+		if sChr in dChrlist:
+			
+			sInterVar=sInterVar.strip()
+			sInterVar=sInterVar.split(" PVS1=")[0]
+			sInterVar=sInterVar.split("InterVar: ")[1]
+			if "|" in sInfo:
+				sInfo=sInfo.split("|")[1]
+			sInfo=sInfo.replace("<br>",",")
+			
+			if sAllelic=="het":
+				sAllelic="Heterozygous"
+			elif sAllelic=="hom":
+				sAllelic="Homozygous"
+			#Deletion
+			#TMEM52:NM_178545:exon1:c.69_77del:p.23_26del
+			#Subsitution
+			#SAMD11:NM_152486:exon14:c.C1830T:p.Y610Y
+			#Insertion
+			#PRDM2:NM_001007257:exon3:c.1501_1502insCTC:p.T501delinsTP,PRDM2:NM_012231:exon8:c.2104_2105insCTC:p.T702delinsTP,PRDM2:NM_015866:exon8:c.2104_2105insCTC:p.T702delinsTP
+			sAATrans=sAATrans.split(",")[0]
+			
+			
+			
+			
+			
+			
+			
+			if ((sInterVar=="Likely pathogenic") or (sInterVar=="Pathogenic")):
+				lAATrans=sAATrans.split(":")
+				try:
+					sNMID=lAATrans[1]
+					nChange=lAATrans[-2]
+					sAAChange=lAATrans[-1]
+					if "del" in nChange:
+						sHGVS=nChange+sAAChange
+					elif "ins" in nChange:
+						sHGVS=nChange+sAAChange
+					else:
+						sPosition=nChange[3:-1]
+						sHGVS="c."+sPosition+nChange[2]+">"+nChange[-1]
+				except IndexError:
+					#print("No AAChange")
+					#print(lAATrans)
+					#print(sLine)
+					#sys.exit()
+					sNMID="splicing"
+					#sHGVS="c."+sPosition+nChange[2]+">"+nChange[-1]
+					sHGVS="g."+str(nPosition)+sRef+">"+sAlt
+					
+					sAAChange="NA"
+					
+				
+				sKey=sChr+"_"+nPosition+"_"+sRef+"_"+sAlt
+				dIntervarPathoDict[sKey]=[sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID]
 			else:
-				sPosition=nChange[3:-1]
-				sHGVS="c."+sPosition+nChange[2]+">"+nChange[-1]
-			sKey=sChr+"_"+nPosition+"_"+sRef+"_"+sAlt
-			dIntervarPathoDict[sKey]=[sGene,sRsID,sAAChange,sInterVar,sAllelic,sInfo,sHGVS,sNMID]
-		else:
-			lAATrans=sAATrans.split(":")
-
-			sKey=sChr+"_"+nPosition+"_"+sRef+"_"+sAlt
-			dIntervarUSDict[sKey]=[sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo]
+				lAATrans=sAATrans.split(":")
+	
+				sKey=sChr+"_"+nPosition+"_"+sRef+"_"+sAlt
+				dIntervarUSDict[sKey]=[sGene,sRsID,sAATrans,sInterVar,sAllelic,sInfo]
 		
 		
 		
@@ -1034,6 +1047,7 @@ def producer_task(q, cosmic_dict):
 	
 	#lFilelist=glob.glob("/storage/home/leefall2/mypro/CKD/Parsed/Merged_VCF/raw/*.vcf")
 	lFilelist=glob.glob("*.txt")
+	#lFilelist=lFilelist[0:1]
 	#sID=sFile.split("/")[-1]
 	#sID=sID.split(".vc")[0]
 	#lFilelist=["CKD0001.txt"]
